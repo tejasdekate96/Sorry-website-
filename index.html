@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Unlock</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{
+margin:0;height:100vh;display:flex;align-items:center;justify-content:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+font-family:sans-serif;
+}
+.card{
+background:rgba(255,255,255,.2);
+backdrop-filter:blur(10px);
+padding:30px;border-radius:20px;
+text-align:center;color:white;
+width:90%;max-width:350px;
+}
+input{
+width:100%;padding:12px;border-radius:12px;
+border:none;text-align:center;font-size:18px;
+}
+button{
+margin-top:15px;padding:12px;width:100%;
+border:none;border-radius:14px;
+background:#ff4d6d;color:white;
+font-size:18px;
+}
+.err{display:none;margin-top:10px}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h2>🔐 Unlock My Heart</h2>
+<p>Hint: ❤️ ka number</p>
+<input type="password" id="p" placeholder="Enter password">
+<button onclick="go()">Unlock ❤️</button>
+<div class="err" id="e">Galat hai 😔</div>
+</div>
+
+<script>
+function go(){
+ if(document.getElementById("p").value==="143"){
+  location.href="page1.html";
+ }else{
+  document.getElementById("e").style.display="block";
+ }
+}
+</script>
+</body>
+</html>
