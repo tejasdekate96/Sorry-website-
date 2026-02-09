@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feelings</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{
+margin:0;height:100vh;
+display:flex;align-items:center;justify-content:center;
+background:linear-gradient(135deg,#fbc2eb,#a6c1ee);
+font-family:sans-serif;
+}
+.box{
+background:white;padding:30px;border-radius:20px;
+width:90%;max-width:350px;text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="box">
+<h2 id="t"></h2>
+<button onclick="location.href='page3.html'">Next ➜</button>
+</div>
+
+<script>
+let text="Tumhari muskaan meri sabse badi kamzori hai… ❤️";
+let i=0;
+setInterval(()=>{
+ if(i<text.length){
+  document.getElementById("t").innerHTML+=text[i++];
+ }
+},80);
+</script>
+</body>
+</html>
